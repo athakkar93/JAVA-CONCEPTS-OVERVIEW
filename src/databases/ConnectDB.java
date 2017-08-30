@@ -149,7 +149,7 @@ public class ConnectDB {
         return data;
     }
 
-    public void InsertDataFromArrayListToMySql(List<Object> list,String tableName, String columnName)
+    public void InsertDataFromArrayListToMySql(ArrayList<String> list, String tableName, String columnName)
     {
         try {
             connectToMySql();
@@ -206,10 +206,10 @@ public class ConnectDB {
     {
         try {
             connectToMySql();
-                ps = connect.prepareStatement("INSERT INTO "+tableName+" ( " + columnName1 + "," + columnName2 + " ) VALUES(?,?)");
-                ps.setString(1,"Ankita Sing");
-                ps.setInt(2,3590);
-                ps.executeUpdate();
+            ps = connect.prepareStatement("INSERT INTO "+tableName+" ( " + columnName1 + "," + columnName2 + " ) VALUES(?,?)");
+            ps.setString(1,"Ankita Sing");
+            ps.setInt(2,3590);
+            ps.executeUpdate();
 
 
         } catch (IOException e) {
@@ -225,33 +225,33 @@ public class ConnectDB {
         List<User> list = new ArrayList<>();
         User user = null;
         try{
-        Connection conn = connectToMySql();
-        String query = "SELECT * FROM profile";
-        // create the java statement
-        Statement st = conn.createStatement();
-        // execute the query, and get a java resultset
-        ResultSet rs = st.executeQuery(query);
-        // iterate through the java resultset
-        while (rs.next())
-        {
-            String name = rs.getString("name");
-            int id = rs.getInt("id");
-            //System.out.format("%s, %s\n", name, id);
-            user = new User(name,id);
-            list.add(user);
+            Connection conn = connectToMySql();
+            String query = "SELECT * FROM profile";
+            // create the java statement
+            Statement st = conn.createStatement();
+            // execute the query, and get a java resultset
+            ResultSet rs = st.executeQuery(query);
+            // iterate through the java resultset
+            while (rs.next())
+            {
+                String name = rs.getString("name");
+                int id = rs.getInt("id");
+                //System.out.format("%s, %s\n", name, id);
+                user = new User(name,id);
+                list.add(user);
 
+            }
+            st.close();
+        }catch (Exception e){
+            System.err.println("Got an exception! ");
+            System.err.println(e.getMessage());
         }
-        st.close();
-       }catch (Exception e){
-           System.err.println("Got an exception! ");
-           System.err.println(e.getMessage());
-         }
-       return list;
+        return list;
     }
 
     public static void main(String[] args)throws IOException, SQLException, ClassNotFoundException {
 
-    	
+
         insertProfileToMySql("profile","name", "id");
         List<User> list = readFromMySql();
         for(User user:list){

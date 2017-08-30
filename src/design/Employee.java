@@ -16,12 +16,16 @@ public interface Employee {
 	
 	//assignDepartment() will assign employee to departments
     public void assignDepartment();
+
 	
 	//calculate employee salary
-	public int calculateSalary();
+	public double calculateSalary();
 	
 	//employee benefit
 	public void benefitLayout();
+
+	//employee age
+	public int employeeAge();
 	
 	
 

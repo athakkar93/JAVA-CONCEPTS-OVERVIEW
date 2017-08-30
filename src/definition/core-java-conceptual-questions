@@ -2,44 +2,140 @@ Please answer the below core-java Questions:
 
 
 What jdk contains or composed of and define each components?
-What is IDE?
-What are the IDEs available in the market to support java?
-Explain the entire java life cycle.
-what is class?
-What is object?
-What is the entry point of an application?
-Why main is static?
-What is the difference between an Interface and Abstract class?
-Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
-what is Access Specifier?
-What is OOP ? Define each feature of java OOP.
-What is API? Name list of API that you have used so far.
-Does java support multiple inheritance?
-What is method overloading and when it happens?
-Explain exceptions in java and how to handle it.
-What is static keyword in java? How it has been used in variables and methods ?
-What is final and how it has been used variables and methods?
-What is final, finally and finalize?
-What is a constructor ?
-What is "this" keyword in java ?
-What is "super" keyword in java?
-What is JVM stand for ?
-What version of java are you using?
-What is JAR stand for ?
-What is compile time and run time?
-What is heap?
-How java manage it's memory?
-What is the difference between String, StringBuffer and StringBuilder?
-What is Singleton class?
-What is Serialization and Deserialization?
-Which one will take more memory, an int or Integer?
-Why is String Immutable in Java?
-What is constructor chaining in Java?
-The difference between Serial and Parallel Garbage Collector?
-What is JIT stands for?
-Explain Java Heap space and Garbage collection?
-Can you guarantee the garbage collection process?
-What is the difference between stack and heap in Java?
+A: JDK stands for Java Development Kit.  It is composed of :
+JRE- Java Runtime Environment
+Compiler-Translates source code into bytecode
+Debugger-This is for debugging and inspection of code.
 
+What is IDE?
+A: Integrated Development Environment. This is where the source code is written.
+
+What are the IDEs available in the market to support java?
+A: Popular IDEs include: Eclipse, IntelliJ, and Netbeans.
+
+Explain the entire java life cycle.
+A: Source code is initially written in an IDE.  The source code is then transferred into byte code
+via the Java Compiler.  Next, the JVM (Java Virtual Machine) which includes a Just in time Compiler, executes the
+bytecodes.  This process of transferring source code into bytecodes allows Java Code to be run on many platforms.
+
+What is class?
+A: A class is a blueprint of an object.
+
+What is object?
+A: An object is an instance of a class.
+
+What is the entry point of an application?
+A: The entry point of an application is the main method.
+
+Why main is static?
+A: Before any objects are made it is called by the JVM.
+
+What is the difference between an Interface and Abstract class?
+A: In an interface you can only declare methods.  In an abstract class you can implement
+non-abstract methods and declare abstract methods.
+
+Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+A: No.  You can instantiate the subclasses.
+
+
+what is Access Specifier?
+A: Can be public, private, or protected.  The access specifier determines the level of access to classes,
+methods, fields, and constructors.
+
+What is OOP ? Define each feature of java OOP.
+A:OOP stands for object oriented programming, it includes: Abstraction, Polymorphism, Encapsulation,
+and Inheritance.  Abstraction is the hiding of implementation.  Polymorphism is the ability of an object to
+take on many forms.  Encapsulation is data hiding.  Inheritance allows a class to inherit all of the characteristics
+of a parent(also known as super) class.
+
+What is API? Name list of API that you have used so far.
+A: API stands for Application programming interface.  Some of the API's that i have used fo far
+include: BufferedReader API, String API and Scanner API.
+
+Does java support multiple inheritance?
+A: No, java does not support multiple inheritance.
+
+What is method overloading and when it happens?
+A: Method overloading happens in compile time.  Allows for multiple methods, sharing a common name.
+
+Explain exceptions in java and how to handle it.
+A: Exceptions are a disruption in the execution of a program. This can be handled by the use of a try/catch block.
+
+What is static keyword in java? How it has been used in variables and methods ?
+A:  It allows variables and methods to be accessed without instantiation of a class.
+
+What is final and how it has been used variables and methods?
+A:  Final is just how it sounds.  By using final, variables and methods are considered final,
+they cannot be changed.
+
+What is final, finally and finalize?
+A:  Final makes variables and methods unchangeable.  Finally places important code this code will be executed
+with or without exception handling.  Finalize is used as clean up prior to garbage collection.
+
+What is a constructor ?
+A:  A constructor is a method that a initializes an object of a class.
+
+What is "this" keyword in java ?
+A: Reference to a method or constructor being used.
+
+What is "super" keyword in java?
+A: A reference to a super class object.
+
+What is JVM stand for ?
+A: Java Virtual Machine
+
+What version of java are you using?
+A: 1.8
+
+What is JAR stand for ?
+A: Stands for Java Archive.
+
+What is compile time and run time?
+A: Compile time is the time when the code is being compiled.  Run time is when the program is being run.
+
+What is heap?
+A:  This is where memory from classes and arrays is stored.
+
+How java manage it's memory?
+A:  Using the heap.
+
+What is the difference between String, StringBuffer and StringBuilder?
+A:  A String can't be changed once created.  StringBuffer can be changed.  StringBuilder is similar to
+StringBuffer except for the fact that it is not thread safe.
+
+What is Singleton class?
+A: In OOP a singleton class that can only have one object at a time.
+Uses a private constructor and a static method with the return type of Singleton Class.
+
+What is Serialization and Deserialization?
+A: Serialization is the process on converting an object to a sequence of bytes that
+is sent into a database.  Deserialization is the opposite process.
+
+Which one will take more memory, an int or Integer?
+A: The same amount of memory.
+
+Why is String Immutable in Java?
+A:  String is Immutable in Java to avoid the risk of a serious security issue.
+
+What is constructor chaining in Java?
+A:  Calling on constructor from another.  This can be done using keywords like, "this"
+and, "super."
+
+The difference between Serial and Parallel Garbage Collector?
+A: Serial garbage collector is for simple single threaded environments and small heaps.
+Parallel Garbage Collector comes with the JVM and can process multiple threads.
+
+What is JIT stands for?
+A: Just In Time (Compiler)
+
+Explain Java Heap space and Garbage collection?
+A:  Heap space is used when creating an object.  When an object is garbage collected it is sent back
+into the Heap space.
+
+Can you guarantee the garbage collection process?
+A: Java comes with an automatic garbage collector.
+
+What is the difference between stack and heap in Java?
+A:  Stacks are used to store memory for local variables.  Heap memory is used to store objects.
 
 
